@@ -1,0 +1,18 @@
+{
+    "sourceFile": ".vscode/extensions.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642536692060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642536692060,
+            "name": "Commit-0",
+            "content": "{\r\n    \"recommendations\": [\r\n        \"octref.vetur\"\r\n    ]\r\n}"
+        }
+    ]
+}

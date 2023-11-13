@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/views/Admin.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642538049340,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642538049340,
+            "name": "Commit-0",
+            "content": "<template>\r\n<div class=\"mainDiv\">\r\n  <v-container>\r\n    <HomePage />\r\n  </v-container>\r\n</div>\r\n</template>\r\n\r\n<script>\r\n  import HomePage from '../components/HomePage.vue'\r\n\r\n  export default {\r\n    name: 'Home',\r\n\r\n    components: {\r\n      HomePage,\r\n    },\r\n  }\r\n</script>\r\n"
+        }
+    ]
+}

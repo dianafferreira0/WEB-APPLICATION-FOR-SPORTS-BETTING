@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dataAPI/controllers/apostador.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642532632270,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642532632270,
+            "name": "Commit-0",
+            "content": "const Apostador = require(\"../models/apostador.js\");\r\nconst Apostadores = module.exports;\r\nvar sql = require('../models/db.js');\r\nconst { response } = require(\"express\");\r\n\r\nApostadores.listar = () => {\r\n  return Apostador.getAll();\r\n};\r\n\r\nApostadores.get = (email) => {\r\n  return Apostador.getUser(email);\r\n};\r\n\r\nApostadores.update = (idApostador, apostador) => {\r\n  return Apostador.updateUser(idApostador, apostador);\r\n};\r\n\r\nApostadores.put = (apostador) => {\r\n  if (!Apostador.getUser(apostador)) {\r\n    return Apostador.regist(apostador);\r\n  }\r\n};\r\n\r\nApostadores.createtrans = (idApostador, valor, saldo, data) => {\r\n  return Apostador.createTransacoes(idApostador, valor, saldo, data);\r\n};\r\n\r\nApostadores.gettrans = (idApostador) => {\r\n  return Apostador.getTransacoes(idApostador);\r\n};\r\n\r\nApostadores.login = (user) => {\r\n  return Apostador.loginUser(user.email,user.password);\r\n}\r\n"
+        }
+    ]
+}

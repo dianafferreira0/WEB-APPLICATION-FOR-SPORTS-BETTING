@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642534024709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642534024709,
+            "name": "Commit-0",
+            "content": "import Vue from 'vue'\r\nimport VueRouter from 'vue-router'\r\nimport Home from '../views/Home.vue'\r\nimport Login from '../views/Login.vue'\r\nimport Register from '../views/Register.vue'\r\nimport Settings from '../views/Settings.vue'\r\nimport Transactions from '../views/Transactions.vue'\r\nimport BetHistory from '../views/BetHistory.vue'\r\nimport Deposit from '../views/Deposit.vue'\r\nimport Withdrawal from '../views/Withdrawal.vue'\r\nVue.use(VueRouter)\r\n\r\nconst routes = [\r\n  {\r\n    path: '/login',\r\n    name: 'Login',\r\n    component: Login,\r\n    beforeEnter: (to, from, next) => {\r\n      var expirationDate = localStorage.getItem(\"expirationDate\")\r\n      if(!expirationDate) next()\r\n      else if(new Date(expirationDate) > new Date())\r\n      next({ name: 'Home' })\r\n          else\r\n          next()\r\n    }\r\n  },\r\n  {\r\n    path: '/',\r\n    name: 'Home',\r\n    component: Home\r\n  }, \r\n  {\r\n    path: '/register',\r\n    name: 'Register',\r\n    component: Register\r\n  },\r\n  {\r\n    path: '/settings',\r\n    name: 'Settings',\r\n    component: Settings\r\n  },\r\n  {\r\n    path: '/transactions',\r\n    name: 'Transactions',\r\n    component: Transactions\r\n  },\r\n  {\r\n    path: '/bethistory',\r\n    name: 'BetHistory',\r\n    component: BetHistory\r\n  }, \r\n  {\r\n    path: '/deposit',\r\n    name: 'Deposit',\r\n    component: Deposit\r\n  }, \r\n  {\r\n    path: '/withdrawal',\r\n    name: 'Withdrawal',\r\n    component: Withdrawal\r\n  },\r\n  \r\n]\r\n\r\nconst router = new VueRouter({\r\n  routes\r\n})\r\n\r\nexport default router\r\n"
+        }
+    ]
+}

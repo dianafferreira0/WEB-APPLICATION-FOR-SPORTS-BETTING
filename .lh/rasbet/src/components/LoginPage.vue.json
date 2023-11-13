@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/components/LoginPage.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642533653922,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642533653922,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <v-card class=\"centerCard\" elevation=\"5\">\r\n    <v-card-text>\r\n          <h2 class=\"cardTittle\">RASBET</h2>\r\n          <v-form ref=\"form\" class=\"Form\" classv-model=\"valid\" lazy-validation>\r\n            <v-text-field\r\n              v-model=\"form.email\"\r\n              label=\"Email\"\r\n              :rules=\"[\r\n                (v) => !!v || 'Email is required',\r\n                (v) => /.+@.+\\..+/.test(v) || 'Email must be valid',\r\n              ]\"\r\n            >\r\n            </v-text-field>\r\n            <v-text-field\r\n              v-model=\"form.password\"\r\n              label=\"Password\"\r\n              :rules=\"[\r\n                (v) => !!v || 'Password is required',\r\n                (v) =>\r\n                  v.length >= 6 || 'Password must be at least 6 characters',\r\n              ]\"\r\n              type=\"password\"\r\n            >\r\n            </v-text-field>\r\n            <!-- forgot password -->\r\n            <v-btn\r\n              class=\"forgotPassword\"  color=\"#063606\"\r\n              @click=\"forgotPassword\"\r\n              >\r\n              Esqueceu sua senha?\r\n            </v-btn>\r\n            <v-btn class=\"loginButton white--text\" color=\"#063606\" block @click=\"login\"> Login </v-btn>\r\n            <v-btn\r\n              class=\"needAccount\"  color=\"#063606\"\r\n              @click=\"Register\"\r\n              >\r\n              Não tem conta? Proceda ao registo.\r\n            </v-btn>\r\n          </v-form>\r\n    </v-card-text>\r\n  </v-card>\r\n</template>\r\n<script>\r\nimport Axios from \"axios\";\r\nconst dataAPI = require(\"@/config/host\").dataAPI;\r\nexport default {\r\n  name: 'Login',\r\n\r\n    props:[\r\n        'merda',\r\n    ],\r\n\r\n  data() {\r\n    return {\r\n      valid: false,\r\n      form: {\r\n        email: '',\r\n        password: '',\r\n      },\r\n    }\r\n  },\r\n\r\n  methods: {\r\n    async login() {\r\n      \r\n      if (this.$refs.form.validate()) {\r\n        console.log(this.form);\r\n        var result = await Axios.post(dataAPI+\"apostador/login\",this.form)\r\n        result = result.data\r\n        console.log(result)\r\n        this.$router.push('/')\r\n      }\r\n    },\r\n    Register(){\r\n      this.$router.push('/register')\r\n    },\r\n    forgotPassword(){\r\n    },\r\n\r\n  },\r\n}\r\n</script>\r\n<style>\r\n\r\n.centerCard {\r\n  height: 100%;\r\n  margin-top: 20vh;\r\n  margin-left: 22vw;\r\n  margin-right: 22vw;\r\n  padding-bottom: 10vh;\r\n  padding-left: 2vw;\r\n  padding-right: 2vw;\r\n}\r\n\r\n.cardTittle {\r\n  font-size: 2vw;\r\n  font-weight: bold;\r\n  text-align: center;\r\n  color: #063606;\r\n  padding-top: 6vh;\r\n\r\n}\r\n\r\n.forgotPassword {\r\n  font-size: 1vw;\r\n  font-weight: bold;\r\n  align-items: right;\r\n  float: right;\r\n  color: #063606;\r\n  margin-top: 2vh;\r\n  margin-bottom: 2vh;\r\n}\r\n.needAccount {\r\n  margin-top: 4vh;\r\n  \r\n  float: right;\r\n}\r\n\r\n\r\n</style>"
+        }
+    ]
+}

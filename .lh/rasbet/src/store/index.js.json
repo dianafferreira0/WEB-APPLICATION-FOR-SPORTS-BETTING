@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/store/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642537828066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642537828066,
+            "name": "Commit-0",
+            "content": "import Vue from 'vue'\r\nimport Vuex from 'vuex'\r\nimport createPersistedState from \"vuex-persistedstate\"\r\n\r\nVue.use(Vuex)\r\n\r\n// const lhost = \"http://localhost:3030\";\r\nexport default new Vuex.Store({\r\n  state: {\r\n    userName: \"\",\r\n    userSurname: \"\",\r\n    accessToken : \"\",\r\n    saldo: 0,\r\n  },\r\n  plugins: [createPersistedState()],\r\n  getters: {  //this.$store.getters.userName\r\n    userName: state => {\r\n      return state.userName\r\n    },\r\n    userSurname: state => {\r\n      return state.userSurname\r\n    },\r\n    accessToken: state => {\r\n      return state.accessToken\r\n    },\r\n    saldo: state => {\r\n      return state.saldo\r\n    },\r\n  },\r\n  mutations: { //this.$store.commit(\"updateUserName\", val)\r\n    updateUserName: (state, payload) => {\r\n      Vue.set(state, \"userName\", payload);\r\n    },\r\n    updateUserSurname: (state, payload) => {\r\n      Vue.set(state, \"userSurname\", payload);\r\n    },\r\n    updateAccessToken: (state, payload) => {\r\n      Vue.set(state, \"accessToken\", payload);\r\n    },\r\n    updateSaldo: (state, payload) => {\r\n      Vue.set(state, \"saldo\", payload);\r\n    }\r\n  },\r\n  actions: {\r\n    // login({ commit }, user) {\r\n    //   return new Promise((resolve, reject) => {\r\n    //     axios\r\n    //       .post(\"http://localhost:7999/api/\", {\r\n    //         email: user.email,\r\n    //         password: user.password\r\n    //       })\r\n    //       .then(res => {\r\n    //         if (res.data) {\r\n    //           //alert(JSON.stringify(res.data))\r\n    //           if(res.data.msg!=undefined){\r\n    //             resolve(res);\r\n    //           }\r\n    //             else{\r\n    //             var user_data = VueJwtDecode.decode(res.data)\r\n    //             user={\r\n    //               token: res.data,\r\n    //               email: user.email,\r\n    //               grupo: user_data.user.grupo,\r\n    //               clinicas: user_data.user.clinicas,\r\n    //               empresa: user_data.user.empresa\r\n    //             }\r\n    //             axios.defaults.headers.common[\"Authorization\"] = res.data;\r\n    //             commit('auth_success', user)\r\n    //             resolve(res);\r\n    //           }\r\n    //         } else\r\n    //           commit(\"set_errors\", {\r\n    //             active: true,\r\n    //             message: \"Ocorreu um erro no processo de autenticação.\",\r\n    //             status: \"ERROR\"\r\n    //           });\r\n    //         reject(\"Fail\");\r\n    //       })\r\n    //       .catch(() => {\r\n    //         commit('auth_error')\r\n    //         reject(\"fail\");\r\n    //       });\r\n    //   });\r\n    // }\r\n  },\r\n  modules: {\r\n  }\r\n})\r\n"
+        }
+    ]
+}

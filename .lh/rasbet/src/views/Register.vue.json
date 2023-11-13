@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/views/Register.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642539795572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642539795572,
+            "name": "Commit-0",
+            "content": "<template>\r\n<div class=\"mainContainer\">\r\n    <v-container>\r\n        <RegisterPage v-bind:merda=\"merda\"/>\r\n    </v-container>\r\n    </div>\r\n</template>\r\n<script>\r\nimport RegisterPage from '../components/RegisterPage.vue'\r\nexport default\r\n{\r\n    name: 'Register',\r\n    components: {\r\n        RegisterPage,\r\n    },\r\n    data : function()\r\n    {\r\n        return {\r\n            merda: 'merda',\r\n        }\r\n    },\r\n}\r\n</script>\r\n<style>\r\n\r\n/* Styles for container Login Page */\r\n.mainContainer {\r\n  background-image:url(\"https://wallpapercave.com/wp/wp8054901.jpg\"); \r\n  background-size: cover;\r\n}\r\n\r\n</style>"
+        }
+    ]
+}

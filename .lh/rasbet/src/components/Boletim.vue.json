@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/components/Boletim.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642532634687,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642532634687,
+            "name": "Commit-0",
+            "content": "<template>\r\n<v-card class=\"boletimMain\" elevation=\"1\">\r\n\r\n    <v-card-text v-if=\"selection\">\r\n    <v-row>\r\n        <v-col cols=\"11\"><h4 class=\"event\"> {{selection.gameName}} </h4></v-col>\r\n        <v-col cols=\"1\" style=\"\r\n    padding-left: 0px;\r\n    padding-right: 0px;\r\n    padding-top: 0px;\r\n    padding-bottom: 0px;\r\n    margin-right: 0px;\">\r\n        <v-btn left icon color=\"#063606\" @click=\"removeBet(selection)\">\r\n         <v-icon >mdi-close</v-icon>\r\n        </v-btn>\r\n        </v-col>\r\n       \r\n        \r\n    </v-row>\r\n        <v-row>\r\n            <v-col cols=\"16\">\r\n                <p class=\"result\">{{selection.name}}</p>\r\n                <p class=\"odd\">Odd Associada: {{selection.odd}}</p>\r\n            </v-col>\r\n        </v-row>\r\n    </v-card-text>\r\n</v-card>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n    props: ['selection'],\r\n    created() {\r\n    },\r\n    methods:{\r\n    },\r\n}\r\n</script>\r\n\r\n<style>\r\n.result{\r\n    font-weight:900;\r\n    color: #063606; \r\n}\r\n\r\n.odd {\r\n    font-weight:900;\r\n    color: rgb(218, 165, 32); \r\n}\r\n\r\n.event {\r\n    font-size:1vw;\r\n    font-weight: 900;\r\n    color: #1D1E1F;\r\n}\r\n\r\n.boletimMain {\r\n    border: solid 1px;\r\n    border-radius: 15px;\r\n    border-color:#063606!important;\r\n    margin:1vh; \r\n    height:100%;\r\n}\r\n\r\n</style>"
+        }
+    ]
+}

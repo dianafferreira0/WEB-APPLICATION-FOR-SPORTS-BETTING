@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/views/Login.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642538985868,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642538985868,
+            "name": "Commit-0",
+            "content": "<template>\r\n<div class=\"mainContainer\">\r\n    <v-container>\r\n        <LoginPage v-bind:merda=\"merda\"/>\r\n    </v-container>\r\n    </div>\r\n</template>\r\n<script>\r\nimport LoginPage from '../components/LoginPage.vue'\r\nexport default\r\n{\r\n    name: 'Login',\r\n    components: {\r\n        LoginPage,\r\n    },\r\n    data : function()\r\n    {\r\n        return {\r\n            merda: 'merda',\r\n        }\r\n    },\r\n}\r\n</script>\r\n<style>\r\n\r\n/* Styles for container Login Page */\r\n.mainContainer {\r\n  background-image:url(\"https://wallpapercave.com/wp/wp8054901.jpg\"); \r\n  height:100%;\r\n  width: 100%;\r\n}\r\n\r\n</style>"
+        }
+    ]
+}

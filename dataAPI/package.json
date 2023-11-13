@@ -1,0 +1,23 @@
+{
+  "name": "rastp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-cron": "^3.0.0",
+    "promise-redis": "0.0.5",
+    "sequelize": "^5.22.3",
+    "sequelize-auto": "^0.8.8"
+  }
+}

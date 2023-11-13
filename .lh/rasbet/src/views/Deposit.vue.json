@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/views/Deposit.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642539226926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642539226926,
+            "name": "Commit-0",
+            "content": "<template>\r\n    <div class=\"mainDiv\">\r\n        <v-container>\r\n            <DepositPage/>\r\n        </v-container>\r\n    </div>\r\n</template>\r\n<script>\r\nimport DepositPage from '../components/DepositPage.vue'\r\nexport default\r\n{\r\n    name: 'Deposit',\r\n    components: {\r\n        DepositPage,\r\n    }\r\n}\r\n</script>\r\n<style>\r\n.mainDiv {\r\n    height: 10% !important;\r\n    width: 100vw;\r\n    background-color: #e0e0e0!important;\r\n    margin-top: 0vh;\r\n}\r\n</style>"
+        }
+    ]
+}

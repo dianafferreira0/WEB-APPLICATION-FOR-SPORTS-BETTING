@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dataAPI/app.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642548574501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642548574501,
+            "name": "Commit-0",
+            "content": "var express = require('express');\r\nconst cors = require(\"cors\");\r\nvar path = require('path');\r\nconst cron = require('node-cron');\r\n\r\nvar apostadorRouter = require('./routes/apostador');\r\nvar boletimRouter = require('./routes/boletim');\r\nvar jogoRouter = require('./routes/jogo');\r\nvar partidaRouter = require('./routes/partida');\r\n\r\nvar app = express();\r\napp.use(cors())\r\napp.use(express.json());\r\napp.use(express.urlencoded({ extended: true }));\r\n\r\n\r\napp.use('/apostador/',apostadorRouter);\r\napp.use('/boletim/',boletimRouter);\r\napp.use('/jogo/',jogoRouter);\r\napp.use('/partida/',partidaRouter);\r\n\r\n\r\nconst PORT = process.env.PORT || 3000;\r\napp.listen(PORT, () => {\r\n  console.log(`Server is running on port ${PORT}.`);\r\n});\r\n\r\n\r\n\r\nmodule.exports=app;\r\n"
+        }
+    ]
+}

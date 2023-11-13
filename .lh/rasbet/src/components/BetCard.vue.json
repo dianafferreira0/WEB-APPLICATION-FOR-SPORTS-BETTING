@@ -1,0 +1,18 @@
+{
+    "sourceFile": "rasbet/src/components/BetCard.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642540379286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642540379286,
+            "name": "Commit-0",
+            "content": "<template>\r\n    <v-card elevation=\"1\">\r\n         <v-card-text style=\"border:solid 1px; border-color=#063606\" v-if=\"game\">\r\n            <p></p>\r\n            <v-row>\r\n                <v-col cols=\"6\">\r\n                    <h4  style=\"font-size: 17px; padding-bottom: 5px\">\r\n                    {{ game.name}}</h4>\r\n                    <p style=\"font-size: 15px\">{{ game.data }}</p>\r\n                </v-col>\r\n                \r\n                    <v-col style=\"margin-top: 13px\" cols=\"2\" v-for=\"team in game.equipas\" :key=\"team.idTeam\">\r\n                        <v-btn  style=\"padding-bottom: 10px\"  :class=\"choice == 'win' ? 'buttonSelect' : 'buttonNonSelect'\"\r\n                                @click=\"()=>selectResult(game.id,game.name,team.idEquipa,team.equipa,team.odd,team.idPartida,'win') \"\r\n                                >\r\n                            <div class=gameData>\r\n                                <p class=gameTittle>{{ team.equipa}}</p>\r\n                                <p class=gameOdd>{{ team.odd }}</p>\r\n                            </div>\r\n                        </v-btn>\r\n                    </v-col>\r\n            </v-row>\r\n        </v-card-text>\r\n    </v-card>\r\n</template>\r\n\r\n<script>\r\nexport default {\r\n    props: ['game','selectResult'],\r\n}\r\n\r\n\r\n</script>\r\n<style>\r\n.gameData {\r\n  color: white;\r\n}\r\n\r\n.gameTittle {\r\n  color: #063606;\r\n  inline-size: 90px !important;\r\n  overflow: hidden !important;\r\n  text-overflow: ellipsis !important;\r\n   white-space: nowrap !important;\r\n}\r\n.betButton {\r\n  width: 100%;\r\n}\r\n.buttonSelect {\r\n  background-color: orange !important;\r\n  color: white !important;\r\n  padding: 10vh;\r\n  width: 100%;\r\n}\r\n\r\n.buttonNonSelect {\r\n  background-color: #063606 !important;\r\n  color: white !important;\r\n  width: 100%;\r\n}\r\n\r\n\r\n</style>\r\n"
+        }
+    ]
+}

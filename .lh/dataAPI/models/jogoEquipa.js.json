@@ -1,0 +1,18 @@
+{
+    "sourceFile": "dataAPI/models/jogoEquipa.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1642540293118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1642540293118,
+            "name": "Commit-0",
+            "content": "var sql = require('../models/db.js');\r\n\r\nvar JogoEquipa = function(e){\r\n    this.idJogo = e.idJogo;\r\n    this.IdEquipa=e.IdEquipa;\r\n} \r\n\r\nmodule.exports=JogoEquipa;\r\n\r\nJogoEquipa.createEquipaAjogar = function (idJogo,team1,team2,connection){\r\n    return new Promise(function(resolve, reject) {\r\n        connection.query(`INSERT INTO equipasnojogo (idJogo,idEquipa,score) VALUES (?,(SELECT idEquipa from equipa\r\n                    WHERE equipa.Nome=?),?)\r\n                    ON DUPLICATE KEY UPDATE score=?;\r\n                    INSERT  INTO equipasnojogo (idJogo,idEquipa,score) VALUES (?,(SELECT idEquipa from equipa\r\n                    WHERE equipa.Nome=?)?)\r\n                    ON DUPLICATE KEY UPDATE score=?;`,[idJogo,team1.name,team1.score,team1.score,idJogo,team2.name,team2.score,team2.score],\r\n            function (err, res) {\r\n              if(err) {\r\n                  console.log(err);\r\n                  reject(err);\r\n              }\r\n              else{\r\n                  resolve(res);\r\n              }\r\n          });\r\n      })\r\n}\r\n\r\n/*NSERT INTO jogo (idJogo, name, Data,is_live,live_time,Desporto) values (?,?,?,?,?,?)\r\n              ON DUPLICATE KEY UPDATE name=?,Data=?,is_live=?,live_time=?,Desporto=?`,/*"
+        }
+    ]
+}
